@@ -26,16 +26,16 @@ w\:* {behavior:url(#default#VML);}
   <o:Author>wangq</o:Author>
   <o:LastAuthor>wangq</o:LastAuthor>
   <o:Revision>2</o:Revision>
-  <o:TotalTime>0</o:TotalTime>
-  <o:Created>2016-07-13T10:17:00Z</o:Created>
-  <o:LastSaved>2016-07-13T10:17:00Z</o:LastSaved>
+  <o:TotalTime>11</o:TotalTime>
+  <o:Created>2016-07-13T10:51:00Z</o:Created>
+  <o:LastSaved>2016-07-13T10:51:00Z</o:LastSaved>
   <o:Pages>2</o:Pages>
-  <o:Words>397</o:Words>
-  <o:Characters>2268</o:Characters>
+  <o:Words>68</o:Words>
+  <o:Characters>391</o:Characters>
   <o:Company>University of Manchester</o:Company>
-  <o:Lines>18</o:Lines>
-  <o:Paragraphs>5</o:Paragraphs>
-  <o:CharactersWithSpaces>2660</o:CharactersWithSpaces>
+  <o:Lines>3</o:Lines>
+  <o:Paragraphs>1</o:Paragraphs>
+  <o:CharactersWithSpaces>458</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -46,8 +46,6 @@ w\:* {behavior:url(#default#VML);}
 <link rel=colorSchemeMapping href="project_bidilel_files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
-  <w:SpellingState>Clean</w:SpellingState>
-  <w:GrammarState>Clean</w:GrammarState>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
   <w:PunctuationKerning/>
@@ -372,8 +370,9 @@ w\:* {behavior:url(#default#VML);}
 	panose-1:2 11 6 4 3 5 4 4 2 4;
 	mso-font-charset:0;
 	mso-generic-font-family:swiss;
+	mso-font-format:other;
 	mso-font-pitch:variable;
-	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+	mso-font-signature:3 0 0 0 1 0;}
 @font-face
 	{font-family:Consolas;
 	panose-1:2 11 6 9 2 2 4 3 2 4;
@@ -442,7 +441,8 @@ p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	font-size:8.0pt;
 	font-family:"Tahoma","sans-serif";
 	mso-fareast-font-family:SimSun;
-	mso-fareast-theme-font:minor-fareast;}
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Tahoma;}
 span.PlainTextChar
 	{mso-style-name:"Plain Text Char";
 	mso-style-priority:99;
@@ -468,12 +468,6 @@ span.BalloonTextChar
 	mso-ascii-font-family:Tahoma;
 	mso-hansi-font-family:Tahoma;
 	mso-bidi-font-family:Tahoma;}
-span.SpellE
-	{mso-style-name:"";
-	mso-spl-e:yes;}
-span.GramE
-	{mso-style-name:"";
-	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -548,7 +542,7 @@ table.MsoTableGrid
 	mso-hansi-theme-font:minor-latin;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="1026"/>
+ <o:shapedefaults v:ext="edit" spidmax="1028"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
@@ -562,37 +556,99 @@ table.MsoTableGrid
 <p class=MsoNormal><span style='font-size:18.0pt;line-height:115%'>Zero-Shot
 Visual Recognition via Bidirectional Latent Embedding<o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:16.0pt;line-height:115%'>Introduction<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%'>Qian Wang,
+Ke Chen<o:p></o:p></span></p>
 
-<p class=MsoNormal>Zero-shot learning for visual recognition, e.g., object and
-action <span class=GramE>recognition,</span> has recently attracted a lot of
-attention. However, it still remains challenging in bridging the semantic gap
-between visual features and their underlying semantics and transferring
-knowledge to semantic categories unseen during learning. Unlike most of the
-existing methods that learn either a direct mapping from visual features to
-their semantic representations or a common latent space by the joint use of
-visual features and their semantic representations, we propose a <span
-class=SpellE>stagewise</span> bidirectional latent embedding framework for
-zero-shot visual recognition. In the bottom-up stage, a latent embedding space
-is first created by exploring the topological and <span class=SpellE>labeling</span>
-information underlying training data of known classes via supervised locality
-preserving projection and the latent representations of training data are used
-to form landmarks that guide embedding semantics underlying unseen classes onto
-this latent space. In the top-down stage, semantic representations for unseen
-classes are then projected to the latent embedding space to preserve the
-semantic relatedness via the semi-supervised <span class=SpellE>Sammon</span>
-mapping with landmarks. As a result, the resultant latent embedding space
-allows for predicting the label of a test instance with a simple nearest <span
-class=SpellE>neighbor</span> algorithm. To evaluate the effectiveness of the
-proposed framework, we have conducted experiments on four benchmark datasets in
-object and action recognition, i.e., <span class=SpellE>AwA</span>,
-CUB-200-2011, UCF101 and HMDB51. The experimental results under comparative
-studies demonstrate that our proposed approach yields the state-of-the-art
-performance.</p>
+<p class=MsoNormal><u><span style='font-size:16.0pt;line-height:115%'>Introduction<o:p></o:p></span></u></p>
 
-<p class=MsoNormal><span style='font-size:16.0pt;line-height:115%'>Framework<o:p></o:p></span></p>
-
-<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+<p class=MsoNormal><!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'></span><span
+style='mso-spacerun:yes'> </span>SHAPE <span
+style='mso-spacerun:yes'> </span>\* MERGEFORMAT <span style='mso-element:field-separator'></span><![endif]--><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="Text_x0020_Box_x0020_4" o:spid="_x0000_s1027"
+ type="#_x0000_t202" style='width:474.1pt;height:269pt;visibility:visible;
+ mso-wrap-style:square;mso-left-percent:-10001;mso-top-percent:-10001;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:char;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line;
+ mso-left-percent:-10001;mso-top-percent:-10001;v-text-anchor:top' o:gfxdata="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
+AAAAAAQABADzAAAA8AUAAAAA
+" fillcolor="white [3201]" stroked="f" strokeweight=".5pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>Zero-shot
+    learning for visual recognition, e.g., object and action recognition, has
+    recently attracted a lot of attention. However, it still remains
+    challenging in bridging the semantic gap between visual features and their
+    underlying semantics and transferring knowledge to semantic categories
+    unseen during learning. Unlike most of the existing methods that learn
+    either a direct mapping from visual features to their semantic
+    representations or a common latent space by the joint use of visual
+    features and their semantic representations, we propose a stagewise
+    bidirectional latent embedding framework for zero-shot visual recognition.
+    In the bottom-up stage, a latent embedding space is first created by
+    exploring the topological and labeling information underlying training data
+    of known classes via supervised locality preserving projection and the
+    latent representations of training data are used to form landmarks that
+    guide embedding semantics underlying unseen classes onto this latent space.
+    In the top-down stage, semantic representations for unseen classes are then
+    projected to the latent embedding space to preserve the semantic
+    relatedness via the semi-supervised Sammon mapping with landmarks. As a
+    result, the resultant latent embedding space allows for predicting the
+    label of a test instance with a simple nearest neighbor algorithm. To evaluate
+    the effectiveness of the proposed framework, we have conducted experiments
+    on four benchmark datasets in object and action recognition, i.e., AwA,
+    CUB-200-2011, UCF101 and HMDB51. The experimental results under comparative
+    studies demonstrate that our proposed approach yields the state-of-the-art
+    performance.</p>
+    <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:shape><![endif]--><![if !vml]><img width=636 height=363
+src="project_bidilel_files/image001.png"
+alt="Text Box: Zero-shot learning for visual recognition, e.g., object and action recognition, has recently attracted a lot of attention. However, it still remains challenging in bridging the semantic gap between visual features and their underlying semantics and transferring knowledge to semantic categories unseen during learning. Unlike most of the existing methods that learn either a direct mapping from visual features to their semantic representations or a common latent space by the joint use of visual features and their semantic representations, we propose a stagewise bidirectional latent embedding framework for zero-shot visual recognition. In the bottom-up stage, a latent embedding space is first created by exploring the topological and labeling information underlying training data of known classes via supervised locality preserving projection and the latent representations of training data are used to form landmarks that guide embedding semantics underlying unseen classes onto this latent space. In the top-down stage, semantic representations for unseen classes are then projected to the latent embedding space to preserve the semantic relatedness via the semi-supervised Sammon mapping with landmarks. As a result, the resultant latent embedding space allows for predicting the label of a test instance with a simple nearest neighbor algorithm. To evaluate the effectiveness of the proposed framework, we have conducted experiments on four benchmark datasets in object and action recognition, i.e., AwA, CUB-200-2011, UCF101 and HMDB51. The experimental results under comparative studies demonstrate that our proposed approach yields the state-of-the-art performance.&#13;&#10;&#13;&#10;"
+v:shapes="Text_x0020_Box_x0020_4"><![endif]><!--[if gte vml 1]><v:shapetype
  id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
  path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
  <v:stroke joinstyle="miter"/>
@@ -612,57 +668,129 @@ performance.</p>
  </v:formulas>
  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
  <o:lock v:ext="edit" aspectratio="t"/>
-</v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1027" type="#_x0000_t75"
- style='width:468pt;height:311.25pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="project_bidilel_files/image001.png" o:title=""/>
+</v:shapetype><![endif]--><!--[if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1029" type="#_x0000_t75" style='width:474.1pt;height:269pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'></span><![endif]--><span
+style='font-size:16.0pt;line-height:115%'><o:p></o:p></span></p>
+
+<p class=MsoNormal><u><span style='font-size:16.0pt;line-height:115%'>Framework<o:p></o:p></span></u></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_1" o:spid="_x0000_i1028" type="#_x0000_t75" style='width:468pt;
+ height:311.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="project_bidilel_files/image002.png" o:title=""/>
 </v:shape><![endif]--><![if !vml]><img width=624 height=415
-src="project_bidilel_files/image002.jpg" v:shapes="Picture_x0020_1"><![endif]></span></p>
+src="project_bidilel_files/image003.jpg" v:shapes="Picture_x0020_1"><![endif]></span></p>
 
-<p class=MsoNormal><span style='font-size:16.0pt;line-height:115%'>Datasets and
-splits<o:p></o:p></span></p>
+<p class=MsoNormal><u><span style='font-size:16.0pt;line-height:115%'>Datasets
+and splits</span><o:p></o:p></u></p>
 
-<p class=MsoNormal>We conducted experiments on four datasets, i.e., <span
-class=SpellE>AwA</span>, CUB-200-2011, UCF101 and HMDB51. We use a standard
-40/10 split for <span class=SpellE>AwA</span>, 10 randomly generated 150/50
-splits for CUB-200-2011, 30 randomly generated 51/50 and 81/20 splits for
-UCF101, 30 randomly generated 26/25 splits for HMDB51. The data splits used in
-our experiments can be downloaded <a href="bidilel_datasplits.zip">here</a>
-(.mat files), among which the data splits for UCF101 (51/50) and HMDB51 are
-from <a href="http://www.eecs.qmul.ac.uk/~xx302/"><span class=SpellE>Xun</span>
-Xu</a>.</p>
+<p class=MsoNormal><!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'></span><span
+style='mso-spacerun:yes'> </span>SHAPE <span
+style='mso-spacerun:yes'> </span>\* MERGEFORMAT <span style='mso-element:field-separator'></span><![endif]--><!--[if gte vml 1]><v:shape
+ id="Text_x0020_Box_x0020_5" o:spid="_x0000_s1026" type="#_x0000_t202" style='width:472.1pt;
+ height:94.4pt;visibility:visible;mso-wrap-style:square;mso-left-percent:-10001;
+ mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+SwUGAAAAAAQABADzAAAA8wUAAAAA
+" fillcolor="white [3201]" stroked="f" strokeweight=".5pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>We
+    conducted experiments on four datasets, i.e., AwA, CUB-200-2011, UCF101 and
+    HMDB51. We use a standard 40/10 split for AwA, 10 randomly generated 150/50
+    splits for CUB-200-2011, 30 randomly generated 51/50 and 81/20 splits for
+    UCF101, 30 randomly generated 26/25 splits for HMDB51. The data splits used
+    in our experiments can be downloaded <a href="bidilel_datasplits.zip">here</a>
+    (.mat files), among which the data splits for UCF101 (51/50) and HMDB51 are
+    from <a href="http://www.eecs.qmul.ac.uk/~xx302/">Xun Xu</a>.</p>
+    <p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:shape><![endif]--><![if !vml]><img width=633 height=130
+src="project_bidilel_files/image004.png"
+alt="Text Box: We conducted experiments on four datasets, i.e., AwA, CUB-200-2011, UCF101 and HMDB51. We use a standard 40/10 split for AwA, 10 randomly generated 150/50 splits for CUB-200-2011, 30 randomly generated 51/50 and 81/20 splits for UCF101, 30 randomly generated 26/25 splits for HMDB51. The data splits used in our experiments can be downloaded here (.mat files), among which the data splits for UCF101 (51/50) and HMDB51 are from Xun Xu.&#13;&#10;&#13;&#10;"
+v:shapes="Text_x0020_Box_x0020_5"><![endif]><!--[if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:472.1pt;height:94.4pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'></span><![endif]--><span
+style='font-size:16.0pt;line-height:115%'><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:16.0pt;line-height:115%'>Experimental
-results<o:p></o:p></span></p>
+<p class=MsoNormal><u><span style='font-size:16.0pt;line-height:115%'>Experimental
+results<o:p></o:p></span></u></p>
 
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_2" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:468.75pt;
  height:214.5pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="project_bidilel_files/image003.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=625 height=286
-src="project_bidilel_files/image004.jpg" v:shapes="Picture_x0020_2"><![endif]></span><span
+ <v:imagedata src="project_bidilel_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=625 height=286
+src="project_bidilel_files/image006.jpg" v:shapes="Picture_x0020_2"><![endif]></span><span
 style='font-size:16.0pt;line-height:115%'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_3" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:468.75pt;
  height:234pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="project_bidilel_files/image005.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=625 height=312
-src="project_bidilel_files/image006.jpg" v:shapes="Picture_x0020_3"><![endif]></span><span
+ <v:imagedata src="project_bidilel_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=625 height=312
+src="project_bidilel_files/image008.jpg" v:shapes="Picture_x0020_3"><![endif]></span><span
 style='font-size:16.0pt;line-height:115%'><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:16.0pt;line-height:115%'>Codes and
-data<o:p></o:p></span></p>
+<p class=MsoNormal><u><span style='font-size:16.0pt;line-height:115%'>Codes and
+data<o:p></o:p></span></u></p>
 
-<p class=MsoNormal>If you are interested in our work, the codes and data are available
-upon request:</p>
+<p class=MsoNormal>If you are interested in our work, the codes and data are
+available upon request:</p>
 
-<p class=MsoNormal><span style='font-size:8.0pt;mso-bidi-font-size:11.0pt;
-line-height:115%'><a href="mailto:Ke.chen@manchester.ac.uk"><span
-style='font-size:11.0pt;mso-bidi-font-size:16.0pt;line-height:115%'>Ke.chen@manchester.ac.uk</span></a><o:p></o:p></span></p>
+<p class=MsoNormal><a href="mailto:Ke.chen@manchester.ac.uk"><span
+style='mso-bidi-font-size:16.0pt;line-height:115%'>Ke.chen@manchester.ac.uk</span></a><span
+style='font-size:8.0pt;mso-bidi-font-size:11.0pt;line-height:115%'><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:8.0pt;mso-bidi-font-size:11.0pt;
-line-height:115%'><a href="mailto:Qian.wang@manchester.ac.uk"><span
-style='font-size:11.0pt;mso-bidi-font-size:16.0pt;line-height:115%'>Qian.wang@manchester.ac.uk</span></a><o:p></o:p></span></p>
+<p class=MsoNormal><a href="mailto:Qian.wang@manchester.ac.uk"><span
+style='mso-bidi-font-size:16.0pt;line-height:115%'>Qian.wang@manchester.ac.uk</span></a><span
+style='font-size:8.0pt;mso-bidi-font-size:11.0pt;line-height:115%'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:16.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
 
