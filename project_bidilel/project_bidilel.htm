@@ -9,9 +9,9 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <meta name=ProgId content=Word.Document>
 <meta name=Generator content="Microsoft Word 14">
 <meta name=Originator content="Microsoft Word 14">
-<link rel=File-List href="index_files/filelist.xml">
-<link rel=Preview href="index_files/preview.wmf">
-<link rel=Edit-Time-Data href="index_files/editdata.mso">
+<link rel=File-List href="project_bidilel_files/filelist.xml">
+<link rel=Preview href="project_bidilel_files/preview.wmf">
+<link rel=Edit-Time-Data href="project_bidilel_files/editdata.mso">
 <!--[if !mso]>
 <style>
 v\:* {behavior:url(#default#VML);}
@@ -20,36 +20,32 @@ w\:* {behavior:url(#default#VML);}
 .shape {behavior:url(#default#VML);}
 </style>
 <![endif]-->
-<title>Qian Wang @ Manchester</title>
+<title>Zero-Shot Learning via Bidirecional Latent Embedding</title>
 <!--[if gte mso 9]><xml>
  <o:DocumentProperties>
   <o:Author>wangq</o:Author>
   <o:LastAuthor>wangq</o:LastAuthor>
-  <o:Revision>4</o:Revision>
-  <o:TotalTime>42</o:TotalTime>
-  <o:Created>2016-07-13T10:07:00Z</o:Created>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>3</o:TotalTime>
+  <o:Created>2016-07-13T10:11:00Z</o:Created>
   <o:LastSaved>2016-07-13T10:11:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>28</o:Words>
-  <o:Characters>165</o:Characters>
+  <o:Words>338</o:Words>
+  <o:Characters>1928</o:Characters>
   <o:Company>University of Manchester</o:Company>
-  <o:Lines>1</o:Lines>
-  <o:Paragraphs>1</o:Paragraphs>
-  <o:CharactersWithSpaces>192</o:CharactersWithSpaces>
+  <o:Lines>16</o:Lines>
+  <o:Paragraphs>4</o:Paragraphs>
+  <o:CharactersWithSpaces>2262</o:CharactersWithSpaces>
   <o:Version>14.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
   <o:AllowPNG/>
  </o:OfficeDocumentSettings>
 </xml><![endif]-->
-<link rel=themeData href="index_files/themedata.thmx">
-<link rel=colorSchemeMapping href="index_files/colorschememapping.xml">
+<link rel=themeData href="project_bidilel_files/themedata.thmx">
+<link rel=colorSchemeMapping href="project_bidilel_files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
-  <w:View>Print</w:View>
-  <w:Zoom>110</w:Zoom>
-  <w:SpellingState>Clean</w:SpellingState>
-  <w:GrammarState>Clean</w:GrammarState>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
   <w:PunctuationKerning/>
@@ -59,7 +55,7 @@ w\:* {behavior:url(#default#VML);}
   <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
   <w:DoNotPromoteQF/>
   <w:LidThemeOther>EN-GB</w:LidThemeOther>
-  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
   <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
   <w:Compatibility>
    <w:BreakWrappedTables/>
@@ -71,8 +67,8 @@ w\:* {behavior:url(#default#VML);}
    <w:EnableOpenTypeKerning/>
    <w:DontFlipMirrorIndents/>
    <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
   </w:Compatibility>
-  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
   <m:mathPr>
    <m:mathFont m:val="Cambria Math"/>
    <m:brkBin m:val="before"/>
@@ -347,6 +343,22 @@ w\:* {behavior:url(#default#VML);}
 <!--
  /* Font Definitions */
  @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
+@font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;
 	mso-font-charset:0;
@@ -358,8 +370,9 @@ w\:* {behavior:url(#default#VML);}
 	panose-1:2 11 6 4 3 5 4 4 2 4;
 	mso-font-charset:0;
 	mso-generic-font-family:swiss;
+	mso-font-format:other;
 	mso-font-pitch:variable;
-	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+	mso-font-signature:3 0 0 0 1 0;}
 @font-face
 	{font-family:Consolas;
 	panose-1:2 11 6 9 2 2 4 3 2 4;
@@ -367,6 +380,13 @@ w\:* {behavior:url(#default#VML);}
 	mso-generic-font-family:modern;
 	mso-font-pitch:fixed;
 	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 680460288 22 0 262145 0;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{mso-style-unhide:no;
@@ -382,41 +402,22 @@ w\:* {behavior:url(#default#VML);}
 	font-family:"Calibri","sans-serif";
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
+	mso-fareast-font-family:SimSun;
+	mso-fareast-theme-font:minor-fareast;
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
-a:link, span.MsoHyperlink
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	color:blue;
-	mso-themecolor:hyperlink;
-	text-decoration:underline;
-	text-underline:single;}
-a:visited, span.MsoHyperlinkFollowed
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	color:purple;
-	mso-themecolor:followedhyperlink;
-	text-decoration:underline;
-	text-underline:single;}
+	mso-bidi-theme-font:minor-bidi;}
 p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
+	{mso-style-priority:99;
 	mso-style-link:"Plain Text Char";
 	margin:0cm;
 	margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
 	font-size:10.5pt;
 	font-family:Consolas;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
+	mso-fareast-font-family:SimSun;
+	mso-fareast-theme-font:minor-fareast;}
 p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	{mso-style-noshow:yes;
 	mso-style-priority:99;
@@ -426,105 +427,11 @@ p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
 	mso-pagination:widow-orphan;
 	font-size:8.0pt;
 	font-family:"Tahoma","sans-serif";
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-fareast-language:EN-US;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:10.0pt;
-	margin-left:36.0pt;
-	mso-add-space:auto;
-	line-height:115%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-type:export-only;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	margin-bottom:.0001pt;
-	mso-add-space:auto;
-	line-height:115%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-type:export-only;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	margin-bottom:.0001pt;
-	mso-add-space:auto;
-	line-height:115%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-type:export-only;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:10.0pt;
-	margin-left:36.0pt;
-	mso-add-space:auto;
-	line-height:115%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
+	mso-fareast-font-family:SimSun;
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Tahoma;}
 span.PlainTextChar
 	{mso-style-name:"Plain Text Char";
-	mso-style-noshow:yes;
 	mso-style-priority:99;
 	mso-style-unhide:no;
 	mso-style-locked:yes;
@@ -548,28 +455,22 @@ span.BalloonTextChar
 	mso-ascii-font-family:Tahoma;
 	mso-hansi-font-family:Tahoma;
 	mso-bidi-font-family:Tahoma;}
-span.SpellE
-	{mso-style-name:"";
-	mso-spl-e:yes;}
-span.GramE
-	{mso-style-name:"";
-	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
-	font-size:10.0pt;
-	mso-ansi-font-size:10.0pt;
-	mso-bidi-font-size:10.0pt;
 	font-family:"Calibri","sans-serif";
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
+	mso-fareast-font-family:SimSun;
+	mso-fareast-theme-font:minor-fareast;
 	mso-hansi-font-family:Calibri;
 	mso-hansi-theme-font:minor-latin;
 	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
 @page WordSection1
 	{size:595.3pt 841.9pt;
 	margin:72.0pt 66.75pt 72.0pt 66.7pt;
@@ -578,57 +479,6 @@ span.GramE
 	mso-paper-source:0;}
 div.WordSection1
 	{page:WordSection1;}
- /* List Definitions */
- @list l0
-	{mso-list-id:725107353;
-	mso-list-type:hybrid;
-	mso-list-template-ids:-1890010642 134807567 134807577 134807579 134807567 134807577 134807579 134807567 134807577 134807579;}
-@list l0:level1
-	{mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level2
-	{mso-level-number-format:alpha-lower;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level3
-	{mso-level-number-format:roman-lower;
-	mso-level-tab-stop:none;
-	mso-level-number-position:right;
-	text-indent:-9.0pt;}
-@list l0:level4
-	{mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level5
-	{mso-level-number-format:alpha-lower;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level6
-	{mso-level-number-format:roman-lower;
-	mso-level-tab-stop:none;
-	mso-level-number-position:right;
-	text-indent:-9.0pt;}
-@list l0:level7
-	{mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level8
-	{mso-level-number-format:alpha-lower;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	text-indent:-18.0pt;}
-@list l0:level9
-	{mso-level-number-format:roman-lower;
-	mso-level-tab-stop:none;
-	mso-level-number-position:right;
-	text-indent:-9.0pt;}
-ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
 -->
 </style>
 <!--[if gte mso 10]>
@@ -642,268 +492,126 @@ ul
 	mso-style-priority:99;
 	mso-style-parent:"";
 	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
-	mso-para-margin:0cm;
-	mso-para-margin-bottom:.0001pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0cm;
+	line-height:115%;
 	mso-pagination:widow-orphan;
-	font-size:10.0pt;
+	font-size:11.0pt;
 	font-family:"Calibri","sans-serif";
 	mso-ascii-font-family:Calibri;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-fareast-language:EN-US;}
+	mso-hansi-theme-font:minor-latin;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:59;
+	mso-style-unhide:no;
+	border-top:solid windowtext 1.0pt;
+	border-left:none;
+	border-bottom:solid windowtext 1.0pt;
+	border-right:none;
+	mso-border-top-alt:solid windowtext .5pt;
+	mso-border-bottom-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;}
 </style>
 <![endif]--><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="1028"/>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
  </o:shapelayout></xml><![endif]-->
 </head>
 
-<body lang=EN-GB link=blue vlink=purple style='tab-interval:36.0pt'>
+<body lang=EN-GB style='tab-interval:36.0pt'>
 
 <div class=WordSection1>
 
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-size:14.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif"'><span
-style='mso-spacerun:yes'>          </span>Qian Wang<o:p></o:p></span></b></p>
+<p class=MsoNormal>Zero-Shot Visual Recognition via Bidirectional Latent
+Embedding</p>
 
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-size:14.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif"'><span
-style='mso-spacerun:yes'>          </span></span></b><span style='font-size:
-9.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif"'>Machine
-Learning and Optimization Group<o:p></o:p></span></p>
+<p class=MsoNormal>Introduction</p>
 
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-size:14.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif"'><span
-style='mso-spacerun:yes'>          </span></span></b><span style='font-size:
-9.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif"'>School
-of Computer Science<o:p></o:p></span></p>
+<p class=MsoNormal>Zero-shot learning for visual recognition, e.g., object and
+action recognition, has recently attracted a lot of attention. However, it
+still remains challenging in bridging the semantic gap between visual features
+and their underlying semantics and transferring knowledge to semantic
+categories unseen during learning. Unlike most of the existing methods that
+learn either a direct mapping from visual features to their semantic
+representations or a common latent space by the joint use of visual features
+and their semantic representations, we propose a stagewise bidirectional latent
+embedding framework for zero-shot visual recognition. In the bottom-up stage, a
+latent embedding space is first created by exploring the topological and
+labeling information underlying training data of known classes via supervised
+locality preserving projection and the latent representations of training data
+are used to form landmarks that guide embedding semantics underlying unseen
+classes onto this latent space. In the top-down stage, semantic representations
+for unseen classes are then projected to the latent embedding space to preserve
+the semantic relatedness via the semi-supervised Sammon mapping with landmarks.
+As a result, the resultant latent embedding space allows for predicting the
+label of a test instance with a simple nearest neighbor algorithm. To evaluate
+the effectiveness of the proposed framework, we have conducted experiments on
+four benchmark datasets in object and action recognition, i.e., AwA,
+CUB-200-2011, UCF101 and HMDB51. The experimental results under comparative
+studies demonstrate that our proposed approach yields the state-of-the-art
+performance.</p>
 
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-size:14.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif"'><span
-style='mso-spacerun:yes'>          </span></span></b><span style='font-size:
-9.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif"'>The
-University of Manchester<o:p></o:p></span></p>
+<p class=MsoNormal>Framework</p>
 
-<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><span
-style='font-size:14.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif"'><span
-style='mso-spacerun:yes'>          </span></span></b><span class=SpellE><span
-style='font-size:9.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif"'>wangq</span></span><span
-style='font-size:9.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif"'>[at]cs.man.ac.uk<o:p></o:p></span></p>
-
-<p class=MsoPlainText><!--[if gte vml 1]><v:shapetype id="_x0000_t202"
- coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
  <v:stroke joinstyle="miter"/>
- <v:path gradientshapeok="t" o:connecttype="rect"/>
-</v:shapetype><v:shape id="Text_x0020_Box_x0020_2" o:spid="_x0000_s1027"
- type="#_x0000_t202" style='position:absolute;margin-left:30.45pt;margin-top:9.15pt;
- width:520.3pt;height:100.5pt;z-index:251659264;visibility:visible;
- mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
- mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
- mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
- mso-position-horizontal-relative:text;mso-position-vertical:absolute;
- mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
- mso-width-relative:margin;mso-height-relative:margin;v-text-anchor:top'
- o:gfxdata="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
-ZXYueG1sUEsFBgAAAAAEAAQA8wAAAIgFAAAAAA==
-" stroked="f"/><![endif]--><![if !vml]><span style='mso-ignore:vglayout'>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75"
+ style='width:468pt;height:311.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="project_bidilel_files/image001.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=415
+src="project_bidilel_files/image002.jpg" v:shapes="Picture_x0020_1"><![endif]></span></p>
 
-<table cellpadding=0 cellspacing=0 align=left>
- <tr>
-  <td width=41 height=12></td>
- </tr>
- <tr>
-  <td></td>
-  <td width=697 height=138 bgcolor=white style='vertical-align:top;background:
-  white'><![endif]><![if !mso]><span style='position:absolute;mso-ignore:vglayout;
-  z-index:251659264'>
-  <table cellpadding=0 cellspacing=0 width="100%">
-   <tr>
-    <td><![endif]>
-    <div v:shape="Text_x0020_Box_x0020_2" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
-    class=shape>
-    <p class=MsoPlainText style='text-align:justify'><span style='font-size:
-    12.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif";
-    mso-ascii-theme-font:major-fareast;mso-hansi-theme-font:major-fareast;
-    mso-bidi-theme-font:major-fareast'><o:p>&nbsp;</o:p></span></p>
-    <p class=MsoPlainText style='text-align:justify'><span style='font-size:
-    12.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif";
-    mso-ascii-theme-font:major-fareast;mso-hansi-theme-font:major-fareast;
-    mso-bidi-theme-font:major-fareast'>I am a PhD student supervised by <a
-    href="http://www.cs.man.ac.uk/~kechen"><span class=SpellE>Dr.</span> Ke
-    Chen</a>. My research interests are computer vision and human action
-    understanding. Before coming to Manchester, I got his Master degree in
-    Biomedical Engineering (2013), and Bachelor degree in Electronic Engineering
-    (2010), both from <a href="http://en.ustc.edu.cn/">University of Science
-    and Technology of China</a>.<o:p></o:p></span></p>
-    <p class=MsoPlainText style='text-align:justify'><b style='mso-bidi-font-weight:
-    normal'><span style='font-size:24.0pt;mso-bidi-font-size:10.5pt;font-family:
-    "Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
-    <p class=MsoPlainText style='text-align:justify'><o:p>&nbsp;</o:p></p>
-    <p class=MsoPlainText style='text-align:justify'><o:p>&nbsp;</o:p></p>
-    <p class=MsoPlainText style='text-align:justify'><o:p>&nbsp;</o:p></p>
-    <p class=MsoPlainText style='text-align:justify'><span style='font-size:
-    12.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif";
-    mso-ascii-theme-font:major-fareast;mso-hansi-theme-font:major-fareast;
-    mso-bidi-theme-font:major-fareast'><o:p>&nbsp;</o:p></span></p>
-    <p class=MsoPlainText style='text-align:justify'><span style='font-size:
-    12.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif";
-    mso-ascii-theme-font:major-fareast;mso-hansi-theme-font:major-fareast;
-    mso-bidi-theme-font:major-fareast'><o:p>&nbsp;</o:p></span></p>
-    <p class=MsoPlainText style='text-align:justify'><span style='font-size:
-    12.0pt;mso-bidi-font-size:10.5pt;font-family:"Times New Roman","serif";
-    mso-ascii-theme-font:major-fareast;mso-hansi-theme-font:major-fareast;
-    mso-bidi-theme-font:major-fareast'><o:p>&nbsp;</o:p></span></p>
-    <p class=MsoNormal style='text-align:justify'><o:p>&nbsp;</o:p></p>
-    </div>
-    <![if !mso]></td>
-   </tr>
-  </table>
-  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
- </tr>
-</table>
+<p class=MsoNormal>Datasets and splits</p>
 
-</span><![endif]><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal>We conducted experiments on four datasets, i.e., AwA,
+CUB-200-2011, UCF101 and HMDB51. We use a standard 40/10 split for AwA, 10
+randomly generated 150/50 splits for CUB-200-2011, 30 randomly generated 51/50
+and 81/20 splits for UCF101, 30 randomly generated 26/25 splits for HMDB51. The
+data splits used in our experiments can be downloaded here (.mat files), among
+which the data splits for UCF101 (51/50) and HMDB51 are from Xun Xu’s page.</p>
 
-<p class=MsoPlainText><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal>Experimental results</p>
 
-<p class=MsoPlainText><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoPlainText align=center style='text-align:center'><b
-style='mso-bidi-font-weight:normal'><span style='font-size:24.0pt;mso-bidi-font-size:
-10.5pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoPlainText align=center style='text-align:center'><b
-style='mso-bidi-font-weight:normal'><span style='font-size:24.0pt;mso-bidi-font-size:
-10.5pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></b></p>
-
-<p class=MsoPlainText><o:p>&nbsp;</o:p></p>
-
-<p class=MsoPlainText><o:p>&nbsp;</o:p></p>
-
-<br style='mso-ignore:vglayout' clear=ALL>
-
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal'><!--[if gte vml 1]><v:shape id="_x0000_s1026" type="#_x0000_t202"
- style='position:absolute;margin-left:32.15pt;margin-top:3.4pt;width:520.3pt;
- height:127.2pt;z-index:251662336;visibility:visible;mso-wrap-style:square;
- mso-width-percent:0;mso-height-percent:200;mso-wrap-distance-left:9pt;
- mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
- mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
- mso-position-horizontal-relative:text;mso-position-vertical:absolute;
- mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:200;
- mso-width-relative:margin;mso-height-relative:margin;v-text-anchor:top'
- o:gfxdata="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
-LnhtbFBLBQYAAAAABAAEAPMAAACGBQAAAAA=
-" stroked="f">
- <v:textbox style='mso-fit-shape-to-text:t'/>
-</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
-absolute;z-index:251662336;margin-left:43px;margin-top:5px;width:698px;
-height:173px'>
-
-<table cellpadding=0 cellspacing=0>
- <tr>
-  <td width=698 height=173 bgcolor=white style='vertical-align:top;background:
-  white'><![endif]><![if !mso]><span style='position:absolute;mso-ignore:vglayout;
-  z-index:251662336'>
-  <table cellpadding=0 cellspacing=0 width="100%">
-   <tr>
-    <td><![endif]>
-    <div v:shape="_x0000_s1026" style='padding:3.6pt 7.2pt 3.6pt 7.2pt'
-    class=shape>
-    <p class=MsoNormal><span style='font-size:14.0pt;mso-bidi-font-size:11.0pt;
-    line-height:115%;font-family:"Times New Roman","serif";mso-ascii-theme-font:
-    major-fareast;mso-hansi-theme-font:major-fareast;mso-bidi-theme-font:major-fareast'>Publication:<o:p></o:p></span></p>
-    <p class=MsoListParagraph style='text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
-    style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><span
-    style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </span></span></span><![endif]>Qian Wang, Ke Chen, Zero-Shot Visual
-    Recognition via Bidirectional Latent Embedding, arXiv<span class=GramE>:1607.02104</span>,
-    2016. [<a href="http://arxiv.org/pdf/1607.02104.pdf">pdf</a>][<a
-    href="project_bidilel/project_bidilel.htm">project page</a>]</p>
-    <p class=MsoNormal><o:p>&nbsp;</o:p></p>
-    <p class=MsoNormal><o:p>&nbsp;</o:p></p>
-    </div>
-    <![if !mso]></td>
-   </tr>
-  </table>
-  </span><![endif]><![if !mso & !vml]>&nbsp;<![endif]><![if !vml]></td>
- </tr>
-</table>
-
-</span><![endif]><script  src="http://m1.webstats.motigo.com/c.js?id=4958899&lang=EN&i=3" type="text/javascript">
-</script><span style='font-size:12.0pt;font-family:"Times New Roman","serif";
-mso-fareast-language:ZH-CN'><o:p></o:p></span></p>
+<p class=MsoNormal>Codes and data</p>
 
 </div>
 
-<!-- End Motigo Webstats counter code -->
 </body>
 
 </html>
