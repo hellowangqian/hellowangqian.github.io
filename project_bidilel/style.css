@@ -11,7 +11,7 @@ Released   : 20120712
 
 * {
 	margin: 0;
-	padding: 100;
+	padding: 0;
 }
 
 a {
@@ -24,11 +24,10 @@ a:hover {
 }
 
 body {
-	line-height: 1.75em;
+	line-height: normal;
 	background: #A9D0D6;
-	font-size: 9pt;
+	font-size: 11.5pt;
 	color: #5A6466;
-	font-style: normal;
 }
 
 body,input {
@@ -42,11 +41,10 @@ br.clearfix {
 h1,h2,h3,h4 {
 	text-transform: capitalize;
 	font-weight: normal;
-	font-size: 16px;
 }
 
 h2 {
-	font-size: 18pt;
+	font-size: 1.5em;
 }
 
 h2,h3,h4 {
@@ -55,7 +53,7 @@ h2,h3,h4 {
 }
 
 h3 {
-	font-size: 18pt;
+	font-size: 1.25em;
 }
 
 h4 {
@@ -72,8 +70,7 @@ img.aligntop {
 }
 
 p {
-	margin-bottom: 0em;
-	font-size: 12pt;
+	margin-bottom: 1.5em;
 }
 
 ul {
@@ -95,7 +92,7 @@ a {
 
 #content {
 	padding: 0;
-	width: 700px;
+	width: 660px;
 	margin-top: 0;
 	margin-right: 0;
 	margin-bottom: 0;
@@ -121,12 +118,11 @@ a {
 
 #logo {
 	position: absolute;
-	top: 16px;
-	left: 133px;
-	height: 51px;
+	top: 80px;
+	left: 135px;
+	height: 130px;
 	line-height: normal;
-	width: 755px;
-	font-size: 12px;
+	width: 700px;
 }
 
 #logo a {
@@ -137,7 +133,7 @@ a {
 
 #logo h1 {
 	font-family: "Open Sans", sans-serif;
-	font-size: xx-large;
+	font-size: 3em;
 }
 
 #menu {
@@ -252,7 +248,7 @@ a {
 
 #page-bottom-sidebar {
 	float: left;
-	position: absolute;
+	width: 250px;
 }
 
 #sidebar {

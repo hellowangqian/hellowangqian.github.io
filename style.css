@@ -24,7 +24,7 @@ a:hover {
 }
 
 body {
-	line-height: 1.75em;
+	line-height: normal;
 	background: #A9D0D6;
 	font-size: 11.5pt;
 	color: #5A6466;
@@ -39,7 +39,7 @@ br.clearfix {
 }
 
 h1,h2,h3,h4 {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-weight: normal;
 }
 
@@ -48,7 +48,6 @@ h2 {
 }
 
 h2,h3,h4 {
-	font-family: "Comic Sans MS", cursive;
 	color: #2A3436;
 	margin-bottom: 1em;
 }
@@ -122,8 +121,8 @@ a {
 	top: 80px;
 	left: 135px;
 	height: 130px;
-	line-height: 130px;
-	width: 274px;
+	line-height: normal;
+	width: 700px;
 }
 
 #logo a {
