@@ -1,0 +1,234 @@
+
+
+body {
+	background-color: #ffffff;
+	font-family: 'times';
+	margin: 0;
+}
+#page {
+	width: 960px;
+	margin: 0 auto;
+	padding: 46px 0 0;
+}
+img {
+	border: 0;
+}
+
+/*------------------------------ Sprites ------------------------------*/
+#header span.shadow, #footer span.shadow, #sidebar li.selected > a, #sidebar li > a:hover {
+	background: url(../images/shadows.png) repeat-x;
+}
+#featured, #footer div.section, #contact > div {
+	background: url(../images/separators.png) no-repeat;
+}
+
+/*------------------------------ HEADER ------------------------------*/
+#header {
+	background-color: #303030;
+	width: 100%;
+	text-align: right;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#header > div {
+	height: 46px;
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+#header span.shadow {
+	background-position: 0 -20px;
+	display: block;
+	height: 8px;
+	width: 100%;
+	position: absolute;
+	bottom: -8px;
+	z-index: 999;
+}
+
+/*------------------------------ CONTENTS ------------------------------*/
+#contents > div {
+	display: inline-block;
+	width: 100%;
+	padding-top: 32px;
+}
+#contents > div.body {
+	width: 950px;
+	padding-left: 10px;
+}
+#contents h2, #contents h3 {
+	
+	font-family: 'times';
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 24px;
+	margin: 0 0 24px;
+}
+#contents p {
+	color: #000;
+	font-size: 15px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0 0 24px;
+}
+#contents p a {
+	color: #000;
+}
+#contents p a:hover {
+	color: #000;
+}
+#featured {
+	float: left;
+	background-position: right 0;
+	height: 210px;
+	width: 762px;
+	margin: 0 20px 30px 0;
+	padding: 0 10px 0 0;
+}
+#featured ul {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#featured li {
+	float: left;
+	width: 304px;
+	margin-bottom: 18px;
+	position: relative;
+}
+#featured li p {
+	color: #000;
+	font-family: "times";
+	
+	padding-bottom: 0;
+	text-transform: uppercase;
+}
+#featured li p span {
+	color: #000;
+	display: block;
+	padding-right: 20px;
+}
+#schedule ul {
+	color: #000;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#schedule li {
+	font-size: 15px;
+	line-height: 25px;
+	margin-bottom: 4px;
+}
+#schedule li a {
+	color: #000;
+	text-decoration: none;
+}
+#schedule li a:hover {
+	text-decoration: underline;
+}
+#schedule li span.time {
+	display: inline-block;
+	float: left;
+	font-family: "times";
+	font-size: 13px;
+	line-height: 24px;
+	width: 72px;
+	margin-bottom: 6px;
+	margin-right: 10px;
+}
+
+
+/** Schedules **/
+#contents #schedules {
+	width: 940px;
+	padding: 0 10px;
+}
+#contents #schedules {
+	padding: 0 10px;
+}
+#schedules #sidebar {
+	background: none;
+}
+#schedules #sidebar .section > div {
+	padding-top: 42px;
+ *padding-bottom: 1px; /** Needed for IE7 **/
+}
+#schedules #sidebar ul {
+	padding-bottom: 30px;
+}
+#schedules #sidebar ul li > a {
+	line-height: 43px;
+}
+#schedules #sidebar ul li.selected > a, #schedules #sidebar ul li > a:hover {
+	background-position: 0 -42px;
+}
+#schedules #sidebar #contactbox h3 {
+	padding: 0;
+}
+#schedules #sidebar #contactbox li {
+	display: inline-block;
+	width: 100%;
+	padding: 0;
+}
+#schedules #sidebar #contactbox li p {
+	padding: 0 0 0 70px;
+}
+#schedules #contactbox span {
+	float: left;
+	display: inline-block;
+	line-height: 24px;
+	width: 70px;
+}
+#contents #schedules #main h2, #contents #schedules #main p {
+	padding-left: 8px;
+}
+#contents #schedules #main p em {
+	display: block;
+	font-family: "times";
+	font-style: normal;
+	text-transform: uppercase;
+}
+#contents #schedules #main p span {
+	display: inline-block;
+	font-family: "times";
+	width: 105px;
+}
+#contents #schedules #main p span.age {
+	display: block;
+}
+#schedules a.btn {
+	background-position: 0 -199px;
+	color: #fff;
+	display: block;
+	font-family: "times";
+	font-size: 13px;
+	height: 36px;
+	line-height: 31px;
+	width: 166px;
+	margin-left: 8px;
+	text-align: center;
+	text-decoration: none;
+}
+/*------------------------------ FOOTER ------------------------------*/
+#footer {
+	background-color: #fff;
+	color: #000;
+	font-family: times;
+	font-size: 11px;
+	line-height: 24px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+}
+#footer span.shadow {
+	background-position: 0 0px;
+	display: block;
+	height: 8px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: -8px;
+}
+

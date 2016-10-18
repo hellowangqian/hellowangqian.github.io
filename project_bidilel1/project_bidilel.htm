@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Accumen
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20120712
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<title>Zero-Shot Visual Recognition via Bidirectional Latent Embedding</title>
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=Kreon" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css">
+    div {
+}
+    </style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+			  <div id="logo">
+			    <h2>Zero-Shot Visual Recognition via   Bidirectional Latent Embedding </h2>
+			    <p>Qian Wang, Ke   Chen<p>
+              </div>
+		  </div>
+			<div id="page">
+			  <div id="content">
+				  <div class="box">
+						<h2>Introduction</h2>
+						<p>Zero-shot   learning for visual recognition, e.g., object and action recognition, has recently attracted a lot of attention.   However, it still remains challenging in bridging the semantic gap between   visual features and their underlying semantics and transferring knowledge to   semantic categories unseen during learning. Unlike most of the existing methods   that learn either a direct mapping from visual features to their semantic   representations or a common latent space by the joint use of visual features and   their semantic representations, we propose a stagewise   bidirectional latent embedding framework for zero-shot visual recognition. In   the bottom-up stage, a latent embedding space is first created by exploring the   topological and labeling information underlying   training data of known classes via supervised locality preserving projection and   the latent representations of training data are used to form landmarks that   guide embedding semantics underlying unseen classes onto this latent space. In   the top-down stage, semantic representations for unseen classes are then   projected to the latent embedding space to preserve the semantic relatedness via   the semi-supervised Sammon mapping with landmarks. As   a result, the resultant latent embedding space allows for predicting the label   of a test instance with a simple nearest neighbor   algorithm. To evaluate the effectiveness of the proposed framework, we have   conducted experiments on four benchmark datasets in object and action   recognition, i.e., AwA, CUB-200-2011, UCF101 and HMDB51. The experimental   results under comparative studies demonstrate that our proposed approach yields   the state-of-the-art performance.</p>
+				</div>
+					<div class="box">
+						<h3>framework</h3>
+						<p><img src="image001.png" alt="" width="701" height="409" /></p>
+<p>&nbsp;</p>
+					</div>
+					<div class="box">
+						<h2>Data and Splits</h2>
+                      <p>We   conducted experiments on four datasets, i.e., <a href="http://attributes.kyb.tuebingen.mpg.de/">AwA</a>, <a href="http://www.vision.caltech.edu/visipedia/CUB-200-2011.html">CUB-200-2011</a>, <a href="http://crcv.ucf.edu/data/UCF101.php">UCF101</a> and <a href="http://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/">HMDB51</a>.   We use a standard 40/10 split for AwA, 10 randomly generated 150/50 splits for   CUB-200-2011, 30 randomly generated 51/50 and 81/20 splits for UCF101, 30   randomly generated 26/25 splits for HMDB51. The data splits used in our   experiments can be downloaded <a href="bidilel_datasplits.zip">here</a> (.mat   files), among which the data splits for UCF101 (51/50) and HMDB51 are from <a href="http://www.eecs.qmul.ac.uk/~xx302/">Xun Xu</a>,   and the others are generated randomly by us.					</p>
+					</div>
+                    
+                <div class="box">
+				  <h2>Experimental Results</h2>
+                  <p><img src="image003.png" alt="" width="700" height="350" /></p>
+                  <p><img src="image005.png" alt="" width="700" height="350" /></p>
+				  </div>
+                  
+                <div> 
+                  <h2> Codes and Data </h2>
+                  <p>If you are interested in   our work, the codes and data (e.g., pre-computed visual representations,   semantic representations used in our experiments) are available <a href="code.html">here</a>.   The details of the codes and data are described <a href="readme.txt">here</a>.</p>
+                  <p><a href="mailto:Ke.chen@manchester.ac.uk">Ke.chen@manchester.ac.uk</a></p>
+                  <p><a href="mailto:Qian.wang@manchester.ac.uk">Qian.wang@manchester.ac.uk</a></p>
+                </div>
+                
+                <p>&nbsp;</p>
+                <div>
+                  <h2>Related Paper</h2>
+                <p>Wang,   Q., &amp; Chen, K. (2016).   Zero-Shot Visual Recognition via Bidirectional Latent   Embedding. <em>arXiv</em><em> preprint arXiv:1607.02104</em>.   [<a href="http://arxiv.org/abs/1607.02104">pdf</a>]<U></U></p>            
+                </div>
+                
+					<br class="clearfix" />
+			  </div>
+				<br class="clearfix" />
+		  </div>
+			<div id="page-bottom">
+				<div id="page-bottom-sidebar">
+					<h3><a href="../index.html">home</a></h3>
+			  </div>
+				<div id="page-bottom-content">
+					<h3>&nbsp;</h3>
+</div>
+				<br class="clearfix" />
+		  </div>
+		</div>
+		<div id="footer">
+		  		  
+		</div>
+	</body>
+</html>
