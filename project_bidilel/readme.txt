@@ -12,6 +12,7 @@ Please refer to the following sections for details.
 
 
 -------------- Codes --------------------
+Password: hello1234
 example_[dataset]_[visRep]_[dataSplits].m
 Run this script file to start. You can modify the parameters, the source data in this file.
 
