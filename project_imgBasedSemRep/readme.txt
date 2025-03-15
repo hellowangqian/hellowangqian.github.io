@@ -10,7 +10,7 @@ However we cannot provide the raw images due to the limited drive space and pote
 The image scraper tool is adapted from: https://github.com/NikolaiT/GoogleScraper
 All the credits should go to the author Nikolai!
 
-4. The code used in this work can be found from: staff.cs.manchester.ac.uk/~kechen/BiDiLEL
+4. The code used in this work can be found at: staff.cs.manchester.ac.uk/~kechen/BiDiLEL (password: hello1234)
 
 5. Any further question regarding the paper or data, please contact me:
 qian.wang@manchester.ac.uk 
