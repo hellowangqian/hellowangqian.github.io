@@ -29,9 +29,9 @@ const ResearchHome = () => {
             <h2 className="text-xl text-gray-600 mb-4">Associate Professor of Computer Science</h2>
             
             <div className="flex flex-wrap gap-1 mb-4">
-              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Machine Learning</span>
-              <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Computer Vision</span>
-              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Robotics</span>
+              <span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-sm">Machine Learning</span>
+              <span className="bg-green-50 text-green-700 px-2 py-1 rounded text-sm">Computer Vision</span>
+              <span className="bg-purple-50 text-purple-700 px-2 py-1 rounded text-sm">Robotics</span>
             </div>
             
             <p className="text-gray-700 mb-4">
@@ -66,14 +66,14 @@ const ResearchHome = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-bold mb-4 border-b pb-2">Research Highlights</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card>
+              <Card className="bg-blue-50 border-blue-100">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold mb-2">Real-time Object Detection</h3>
                   <p className="text-gray-700 mb-3">Novel approaches to object detection in resource-constrained environments.</p>
                   <Link to="/research#object-detection" className="text-blue-600 hover:text-blue-800">Learn more →</Link>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="bg-green-50 border-green-100">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold mb-2">Neural Architecture Search</h3>
                   <p className="text-gray-700 mb-3">Automated discovery of efficient neural network architectures.</p>
