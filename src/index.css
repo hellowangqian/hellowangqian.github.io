@@ -1,0 +1,94 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono&display=swap');
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142 72% 50%;
+    --primary-foreground: 144 80% 10%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 142 72% 50%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 142 72% 50%;
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 10% 5.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 142 72% 50%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 142 72% 50%;
+
+    --player-background: 240 10% 5.9%;
+    --player-foreground: 0 0% 98%;
+    --player-muted: 240 5% 65%;
+    --player-accent: 142 72% 50%;
+    --player-accent-foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-opacity-20 backdrop-blur-md backdrop-filter;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  .playlist-item {
+    @apply px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:bg-secondary/80;
+  }
+  
+  .nav-item {
+    @apply flex items-center gap-3 text-sm px-3 py-2 rounded-md transition-all duration-200 hover:bg-secondary/80;
+  }
+  
+  .player-control {
+    @apply p-2 rounded-full transition-all duration-200 text-foreground/80 hover:text-foreground hover:bg-secondary/80;
+  }
+  
+  .volume-slider::-webkit-slider-thumb {
+    @apply appearance-none h-3 w-3 rounded-full bg-primary;
+  }
+}
