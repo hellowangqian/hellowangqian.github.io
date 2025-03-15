@@ -33,7 +33,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ hellowangqian.github.io }}
+      url: ${{ steps.deployment.outputs.hellowangqian.github.io }}
     runs-on: ubuntu-latest
     needs: build
     steps:
